@@ -7,3 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 You can use all of the Angular CLI commands, or simply run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Dependencies
+- Angular CLI
+- Bower
+- Bootstrap 4 (and JQuery)
