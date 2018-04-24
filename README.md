@@ -1,4 +1,4 @@
-# Requests
+# Requests App
 
 This projects is a demo for a dashboard of request from a company. For example; a company that has request for office stuff like pencils, paper, staplers, etc...
 
