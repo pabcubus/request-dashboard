@@ -1,0 +1,20 @@
+{
+  "name": "requests",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Pablo Bassil <pablo.bassil@bairesdev.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Ionicons": "ionicons#^2.0.1"
+  }
+}
