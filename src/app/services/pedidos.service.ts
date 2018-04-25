@@ -16,53 +16,9 @@ export class PedidosService {
 	private generatePedidos() {
 		this.pedidos = [
 			{
-				"_id": "5ade00322a00aeaf20c844ef",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 84436,
-				"user": {
-					"id": 2,
-					"nombre": "pablo",
-					"apellido": "bassil",
-					"usuario": "pbassil",
-					"password": "123",
-					"rol": "operador",
-					"email": "pbassil@hotmail.com",
-					"departamento": {
-						"nombre": "Auditoria",
-						"direccion": "950 Farragut Place, Bannock, West Virginia"
-					}
-				},
-				"detalles": [
-					{
-						"_id": "5ade003227dee813f6502215",
-						"name": "Lapices",
-						"precio": 8684,
-						"cantidad": 3
-					},
-					{
-						"_id": "5ade003216499d81f58d8b65",
-						"name": "Resma de Papel",
-						"precio": 15910,
-						"cantidad": 4
-					},
-					{
-						"_id": "5ade00323bdf5130c6f3cb9e",
-						"name": "Borradores",
-						"precio": 5742,
-						"cantidad": 2
-					},
-					{
-						"_id": "5ade003275bec779b7a7a0db",
-						"name": "Borradores",
-						"precio": 23904,
-						"cantidad": 3
-					}
-				]
-			},
-			{
-				"_id": "5ade00325be673c37fa4773e",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 80678,
+				"_id": "5ae010db4ebf3f736885fb99",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 73233,
 				"user": {
 					"id": 3,
 					"nombre": "camilo",
@@ -78,41 +34,66 @@ export class PedidosService {
 				},
 				"detalles": [
 					{
-						"_id": "5ade003293e5df596a237db8",
-						"name": "Borradores",
-						"precio": 17824,
-						"cantidad": 4
+						"_id": "5ae010db35cc8be6be338f5d",
+						"name": "Resma de Papel",
+						"precio": 6005,
+						"cantidad": 4,
+						"subtotal": 24020
 					},
 					{
-						"_id": "5ade0032d6c1bc841383a1bb",
-						"name": "Marcadores",
-						"precio": 10136,
-						"cantidad": 5
-					},
-					{
-						"_id": "5ade00329853484310ee1477",
-						"name": "Borradores",
-						"precio": 7529,
-						"cantidad": 3
-					},
-					{
-						"_id": "5ade00321610f84d1c4d3553",
-						"name": "Borradores",
-						"precio": 20372,
-						"cantidad": 2
-					},
-					{
-						"_id": "5ade003278ea9b6465693795",
-						"name": "Borradores",
-						"precio": 12154,
-						"cantidad": 4
+						"_id": "5ae010dba4c0ef8a481c87a7",
+						"name": "Resma de Papel",
+						"precio": 13441,
+						"cantidad": 3,
+						"subtotal": 40323
 					}
 				]
 			},
 			{
-				"_id": "5ade00322ad10533d16adf42",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 96360,
+				"_id": "5ae010dbc6906f1a0f73d330",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 84413,
+				"user": {
+					"id": 2,
+					"nombre": "pablo",
+					"apellido": "bassil",
+					"usuario": "pbassil",
+					"password": "123",
+					"rol": "operador",
+					"email": "pbassil@hotmail.com",
+					"departamento": {
+						"nombre": "Auditoria",
+						"direccion": "950 Farragut Place, Bannock, West Virginia"
+					}
+				},
+				"detalles": [
+					{
+						"_id": "5ae010dbc261657688dbdbe9",
+						"name": "Borradores",
+						"precio": 5582,
+						"cantidad": 3,
+						"subtotal": 16746
+					},
+					{
+						"_id": "5ae010db0ede4df8caa47e7f",
+						"name": "Marcadores",
+						"precio": 24438,
+						"cantidad": 2,
+						"subtotal": 48876
+					},
+					{
+						"_id": "5ae010db0cfa90c5082aa10e",
+						"name": "Resma de Papel",
+						"precio": 26959,
+						"cantidad": 2,
+						"subtotal": 53918
+					}
+				]
+			},
+			{
+				"_id": "5ae010db847c80b0d7fcb364",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 65700,
 				"user": {
 					"id": 3,
 					"nombre": "camilo",
@@ -128,85 +109,39 @@ export class PedidosService {
 				},
 				"detalles": [
 					{
-						"_id": "5ade00329a430f2d30b744b0",
+						"_id": "5ae010dbb1319f4131a2d8d0",
 						"name": "Lapices",
-						"precio": 12600,
-						"cantidad": 2
+						"precio": 29020,
+						"cantidad": 3,
+						"subtotal": 87060
 					},
 					{
-						"_id": "5ade0032428b3c0ed9057039",
-						"name": "Lapices",
-						"precio": 5242,
-						"cantidad": 1
+						"_id": "5ae010dba41fd62e26467899",
+						"name": "Resma de Papel",
+						"precio": 11815,
+						"cantidad": 1,
+						"subtotal": 11815
 					},
 					{
-						"_id": "5ade00321f9be68a3d6b0558",
+						"_id": "5ae010db655241a347a537eb",
 						"name": "Marcadores",
-						"precio": 11434,
-						"cantidad": 3
+						"precio": 6168,
+						"cantidad": 1,
+						"subtotal": 6168
 					},
 					{
-						"_id": "5ade0032a7a0c5b926cdbba5",
+						"_id": "5ae010db6352a7b1adbed9bb",
 						"name": "Borradores",
-						"precio": 12223,
-						"cantidad": 5
+						"precio": 23600,
+						"cantidad": 2,
+						"subtotal": 47200
 					}
 				]
 			},
 			{
-				"_id": "5ade0032d700856b0e3d4b41",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 65784,
-				"user": {
-					"id": 3,
-					"nombre": "camilo",
-					"apellido": "bassil",
-					"usuario": "cbassil",
-					"password": 123,
-					"rol": "operador",
-					"email": "cbassil@hotmail.com",
-					"departamento": {
-						"nombre": "Mercadeo",
-						"direccion": "854 Guider Avenue, Eden, Wyoming"
-					}
-				},
-				"detalles": [
-					{
-						"_id": "5ade003221496585a19c1ccf",
-						"name": "Borradores",
-						"precio": 5939,
-						"cantidad": 3
-					},
-					{
-						"_id": "5ade0032b204c1e53b226457",
-						"name": "Lapices",
-						"precio": 11521,
-						"cantidad": 2
-					},
-					{
-						"_id": "5ade0032be5767f1d4e4ed81",
-						"name": "Borradores",
-						"precio": 5799,
-						"cantidad": 3
-					},
-					{
-						"_id": "5ade0032a564c8c32c926fa9",
-						"name": "Resma de Papel",
-						"precio": 17099,
-						"cantidad": 4
-					},
-					{
-						"_id": "5ade00324dee403f89056b5b",
-						"name": "Resma de Papel",
-						"precio": 13116,
-						"cantidad": 1
-					}
-				]
-			},
-			{
-				"_id": "5ade003267fb402dcb99cf49",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 67530,
+				"_id": "5ae010db59c1857247e8d763",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 93750,
 				"user": {
 					"id": 2,
 					"nombre": "pablo",
@@ -222,29 +157,66 @@ export class PedidosService {
 				},
 				"detalles": [
 					{
-						"_id": "5ade0032a1996d0ed86a313e",
+						"_id": "5ae010db7235aee343e71853",
+						"name": "Borradores",
+						"precio": 20216,
+						"cantidad": 2,
+						"subtotal": 40432
+					},
+					{
+						"_id": "5ae010dbdc98591dda4ea516",
 						"name": "Marcadores",
-						"precio": 13005,
-						"cantidad": 3
+						"precio": 8278,
+						"cantidad": 1,
+						"subtotal": 8278
 					},
 					{
-						"_id": "5ade0032a8aed3a7979b090e",
-						"name": "Borradores",
-						"precio": 20226,
-						"cantidad": 5
-					},
-					{
-						"_id": "5ade0032f681bfcf50f84dcc",
-						"name": "Borradores",
-						"precio": 23127,
-						"cantidad": 3
+						"_id": "5ae010db61859a96c791ae8d",
+						"name": "Resma de Papel",
+						"precio": 18485,
+						"cantidad": 2,
+						"subtotal": 36970
 					}
 				]
 			},
 			{
-				"_id": "5ade0032b61535138acfe3e4",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 55590,
+				"_id": "5ae010dba1d2f251c9d7af51",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 97898,
+				"user": {
+					"id": 3,
+					"nombre": "camilo",
+					"apellido": "bassil",
+					"usuario": "cbassil",
+					"password": 123,
+					"rol": "operador",
+					"email": "cbassil@hotmail.com",
+					"departamento": {
+						"nombre": "Mercadeo",
+						"direccion": "854 Guider Avenue, Eden, Wyoming"
+					}
+				},
+				"detalles": [
+					{
+						"_id": "5ae010dbd764d6ad0a63cc46",
+						"name": "Marcadores",
+						"precio": 16411,
+						"cantidad": 2,
+						"subtotal": 32822
+					},
+					{
+						"_id": "5ae010dba3ba2fd8290c8e5f",
+						"name": "Marcadores",
+						"precio": 13000,
+						"cantidad": 5,
+						"subtotal": 65000
+					}
+				]
+			},
+			{
+				"_id": "5ae010dbea5c61c2ab03fb6d",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 68055,
 				"user": {
 					"id": 2,
 					"nombre": "pablo",
@@ -260,41 +232,25 @@ export class PedidosService {
 				},
 				"detalles": [
 					{
-						"_id": "5ade0032c390fec1ca73228b",
+						"_id": "5ae010dbd8353f3f50d09a8e",
 						"name": "Lapices",
-						"precio": 21288,
-						"cantidad": 3
+						"precio": 20204,
+						"cantidad": 5,
+						"subtotal": 101020
 					},
 					{
-						"_id": "5ade003259b8873bd9edf393",
-						"name": "Lapices",
-						"precio": 25237,
-						"cantidad": 2
-					},
-					{
-						"_id": "5ade003202a30d52e61342f3",
-						"name": "Lapices",
-						"precio": 20440,
-						"cantidad": 1
-					},
-					{
-						"_id": "5ade00320f208288b79b8dd7",
-						"name": "Borradores",
-						"precio": 10407,
-						"cantidad": 1
-					},
-					{
-						"_id": "5ade0032681c657a4574f07e",
-						"name": "Lapices",
-						"precio": 28628,
-						"cantidad": 2
+						"_id": "5ae010db5bd2a53b6b16f4a7",
+						"name": "Marcadores",
+						"precio": 23292,
+						"cantidad": 3,
+						"subtotal": 69876
 					}
 				]
 			},
 			{
-				"_id": "5ade003203d7d15939274d43",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 82815,
+				"_id": "5ae010db0a42579e75f5c3d2",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 59734,
 				"user": {
 					"id": 2,
 					"nombre": "pablo",
@@ -310,23 +266,32 @@ export class PedidosService {
 				},
 				"detalles": [
 					{
-						"_id": "5ade0032e8474575e76841eb",
+						"_id": "5ae010db64500fd9ce0d0a66",
 						"name": "Borradores",
-						"precio": 18323,
-						"cantidad": 1
+						"precio": 18835,
+						"cantidad": 4,
+						"subtotal": 75340
 					},
 					{
-						"_id": "5ade003203c8d6196a78afa0",
-						"name": "Resma de Papel",
-						"precio": 19982,
-						"cantidad": 1
+						"_id": "5ae010db7c25c28f640bff05",
+						"name": "Lapices",
+						"precio": 25868,
+						"cantidad": 4,
+						"subtotal": 103472
+					},
+					{
+						"_id": "5ae010db1ad268a5dbe11b77",
+						"name": "Borradores",
+						"precio": 24329,
+						"cantidad": 3,
+						"subtotal": 72987
 					}
 				]
 			},
 			{
-				"_id": "5ade0032609424c7a444fc75",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 89544,
+				"_id": "5ae010db0b4c46ec95e625c0",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 68367,
 				"user": {
 					"id": 3,
 					"nombre": "camilo",
@@ -342,116 +307,114 @@ export class PedidosService {
 				},
 				"detalles": [
 					{
-						"_id": "5ade003239eb0da9b867218a",
+						"_id": "5ae010dbad6ff2f62eadaa76",
 						"name": "Lapices",
-						"precio": 7130,
-						"cantidad": 3
+						"precio": 24805,
+						"cantidad": 5,
+						"subtotal": 124025
 					},
 					{
-						"_id": "5ade0032375a65ba652859e5",
-						"name": "Lapices",
-						"precio": 14763,
-						"cantidad": 2
-					},
-					{
-						"_id": "5ade0032d75b7e7f182af9ee",
+						"_id": "5ae010dbd9f6e4e88f15d382",
 						"name": "Marcadores",
-						"precio": 12051,
-						"cantidad": 3
+						"precio": 28069,
+						"cantidad": 3,
+						"subtotal": 84207
 					},
 					{
-						"_id": "5ade0032fa06d490f2238caa",
-						"name": "Resma de Papel",
-						"precio": 21585,
-						"cantidad": 5
+						"_id": "5ae010dbecdbfce74ffe505e",
+						"name": "Borradores",
+						"precio": 5875,
+						"cantidad": 4,
+						"subtotal": 23500
 					},
 					{
-						"_id": "5ade00325197b421b1ef65d4",
-						"name": "Resma de Papel",
-						"precio": 15559,
-						"cantidad": 5
+						"_id": "5ae010dbcde4d3ff96ad0b74",
+						"name": "Borradores",
+						"precio": 20876,
+						"cantidad": 5,
+						"subtotal": 104380
+					},
+					{
+						"_id": "5ae010db8f902a4240616929",
+						"name": "Lapices",
+						"precio": 25639,
+						"cantidad": 4,
+						"subtotal": 102556
 					}
 				]
 			},
 			{
-				"_id": "5ade003252102aa6384cdc68",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 92789,
+				"_id": "5ae010db88ab330c021dc825",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 93305,
 				"user": {
-					"id": 3,
-					"nombre": "camilo",
+					"id": 2,
+					"nombre": "pablo",
 					"apellido": "bassil",
-					"usuario": "cbassil",
+					"usuario": "pbassil",
 					"password": 123,
 					"rol": "operador",
-					"email": "cbassil@hotmail.com",
+					"email": "pbassil@hotmail.com",
 					"departamento": {
-						"nombre": "Mercadeo",
-						"direccion": "854 Guider Avenue, Eden, Wyoming"
+						"nombre": "Auditoria",
+						"direccion": "950 Farragut Place, Bannock, West Virginia"
 					}
 				},
 				"detalles": [
 					{
-						"_id": "5ade0032540fd5e9cdf69823",
-						"name": "Lapices",
-						"precio": 17132,
-						"cantidad": 2
+						"_id": "5ae010dbb361a9028425cb03",
+						"name": "Marcadores",
+						"precio": 16983,
+						"cantidad": 2,
+						"subtotal": 33966
 					},
 					{
-						"_id": "5ade00327d2171dace1570b6",
-						"name": "Borradores",
-						"precio": 22581,
-						"cantidad": 3
+						"_id": "5ae010db4aab6b2f99a84969",
+						"name": "Resma de Papel",
+						"precio": 19405,
+						"cantidad": 2,
+						"subtotal": 38810
 					},
 					{
-						"_id": "5ade003265a31f25b185de95",
-						"name": "Lapices",
-						"precio": 25447,
-						"cantidad": 2
-					},
-					{
-						"_id": "5ade0032c67955a2beff98f8",
-						"name": "Lapices",
-						"precio": 25483,
-						"cantidad": 5
+						"_id": "5ae010db9a1d63c83199bb96",
+						"name": "Resma de Papel",
+						"precio": 5269,
+						"cantidad": 5,
+						"subtotal": 26345
 					}
 				]
 			},
 			{
-				"_id": "5ade003255c6c7c558ddc37d",
-				"creado": "2018-04-23T15:48:02.492Z",
-				"total": 78254,
+				"_id": "5ae010dbccfaaf7488fe18b1",
+				"creado": "2018-04-25T05:23:39.183Z",
+				"total": 55666,
 				"user": {
-					"id": 3,
-					"nombre": "camilo",
+					"id": 2,
+					"nombre": "pablo",
 					"apellido": "bassil",
-					"usuario": "cbassil",
+					"usuario": "pbassil",
 					"password": 123,
 					"rol": "operador",
-					"email": "cbassil@hotmail.com",
+					"email": "pbassil@hotmail.com",
 					"departamento": {
-						"nombre": "Mercadeo",
-						"direccion": "854 Guider Avenue, Eden, Wyoming"
+						"nombre": "Auditoria",
+						"direccion": "950 Farragut Place, Bannock, West Virginia"
 					}
 				},
 				"detalles": [
 					{
-						"_id": "5ade0032bcb96451deef2374",
-						"name": "Resma de Papel",
-						"precio": 11610,
-						"cantidad": 3
+						"_id": "5ae010dbb7f8189b4a0914d5",
+						"name": "Lapices",
+						"precio": 20156,
+						"cantidad": 4,
+						"subtotal": 80624
 					},
 					{
-						"_id": "5ade00328dc42beddeb0b64f",
-						"name": "Borradores",
-						"precio": 26768,
-						"cantidad": 1
-					},
-					{
-						"_id": "5ade0032857033d837abebd7",
-						"name": "Borradores",
-						"precio": 16357,
-						"cantidad": 1
+						"_id": "5ae010db4ddbb0ba73b3b755",
+						"name": "Marcadores",
+						"precio": 10375,
+						"cantidad": 2,
+						"subtotal": 20750
 					}
 				]
 			}
