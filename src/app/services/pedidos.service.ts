@@ -13,10 +13,14 @@ export class PedidosService {
 		return this.pedidos;
 	}
 
+	addPedido(pedido:any) {
+		this.pedidos.push(pedido);
+	}
+
 	private generatePedidos() {
 		this.pedidos = [
 			{
-				"_id": "5ae010db4ebf3f736885fb99",
+				"_id": 1,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 73233,
 				"user": {
@@ -50,7 +54,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010dbc6906f1a0f73d330",
+				"_id": 2,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 84413,
 				"user": {
@@ -91,7 +95,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010db847c80b0d7fcb364",
+				"_id": 3,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 65700,
 				"user": {
@@ -139,7 +143,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010db59c1857247e8d763",
+				"_id": 4,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 93750,
 				"user": {
@@ -180,7 +184,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010dba1d2f251c9d7af51",
+				"_id": 5,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 97898,
 				"user": {
@@ -214,7 +218,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010dbea5c61c2ab03fb6d",
+				"_id": 6,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 68055,
 				"user": {
@@ -248,7 +252,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010db0a42579e75f5c3d2",
+				"_id": 7,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 59734,
 				"user": {
@@ -289,7 +293,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010db0b4c46ec95e625c0",
+				"_id": 8,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 68367,
 				"user": {
@@ -344,7 +348,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010db88ab330c021dc825",
+				"_id": 9,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 93305,
 				"user": {
@@ -385,7 +389,7 @@ export class PedidosService {
 				]
 			},
 			{
-				"_id": "5ae010dbccfaaf7488fe18b1",
+				"_id": 10,
 				"creado": "2018-04-25T05:23:39.183Z",
 				"total": 55666,
 				"user": {
@@ -420,4 +424,5 @@ export class PedidosService {
 			}
 		];
 	}
+
 }

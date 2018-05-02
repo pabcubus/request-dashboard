@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { app_routing } from './app.routes';
 
@@ -9,10 +10,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SampleComponent } from './components/sample/sample.component';
 
 import { PedidosService } from './services/pedidos.service';
 import { SessionService } from './services/session.service';
 import { ProductosService } from './services/productos.service';
+import { HelperService } from './services/helper.service';
 
 @NgModule({
 	declarations: [
@@ -20,16 +23,19 @@ import { ProductosService } from './services/productos.service';
 		HomeComponent,
 		NavbarComponent,
 		LoginComponent,
-		PedidoComponent
+		PedidoComponent,
+		SampleComponent
 	],
 	imports: [
+		FormsModule,
 		BrowserModule,
 		app_routing
 	],
 	providers: [
 		PedidosService,
 		SessionService,
-		ProductosService
+		ProductosService,
+		HelperService
 	],
 	bootstrap: [AppComponent]
 })

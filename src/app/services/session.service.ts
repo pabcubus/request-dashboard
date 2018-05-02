@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-
 import { User } from '../interfaces/user';
-
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { HelperService } from './helper.service';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class SessionService {
-	logedIn:	Boolean = false;
-	users:		User[] 	= [
+	private logedIn:		Boolean = false;
+	private currentUser:	User;
+	private users:			User[] 	= [
 		{
 			id: 1,
 			nombre: 'franco',
@@ -50,39 +49,44 @@ export class SessionService {
 		}
 	];
 
-	constructor() {
-	}
-
-	getLogedIn(): any {
-		let observable = Observable.create(observer => {
-			setTimeout(() => {
-				observer.next(this.logedIn);
-			}, 2000);
-
-			setTimeout(() => {
-				observer.next(this.logedIn);
-			}, 4000);
-
-			setTimeout(() => {
-				observer.next(this.logedIn);
-			}, 8000);
-
-			setTimeout(() => {
-				observer.complete();
-			}, 10000);
-		});
-
-		return observable;
-	}
-
-	toggleLogedIn() {
-		console.log('service toggled!');
-		this.logedIn = !this.logedIn;
+	constructor(
+		private _helper: HelperService,
+		private router: Router
+	) {
+		this.setCurrentUser();
 	}
 
 	getUser(id:number):User{
 		return this.users.find(function(element) {
 			return element.id == id;
 		});
+	}
+
+	getCurrentUser():User{
+		return this.currentUser;
+	}
+
+	login(usuario:string, password:string):User{
+		let user = this.users.find(function(element) {
+			return (element.usuario == usuario && element.password == password);
+		});
+
+		this.currentUser = user ? user : null;
+
+		this._helper.setLocalStorageKey('user', this.currentUser, true);
+
+		return user;
+	}
+
+	logout(){
+		this.currentUser = null;
+	}
+
+	private setCurrentUser(){
+		this.currentUser = this._helper.getLocalStorageKey('user', true);
+
+		if (!this.currentUser) {
+			this.router.navigate(['/login']);
+		}
 	}
 }

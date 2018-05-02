@@ -1,13 +1,14 @@
-<button class="btn btn-primary">
+<a routerLink="/pedido" class="btn btn-primary">
 	<i class="icon ion-plus-round"></i>
 	Nuevo Pedido
-</button>
+</a>
 
 <div>
 	<table class="table table-hover">
 		<thead>
 			<tr>
 				<th scope="col">#</th>
+				<th scope="col">Creación</th>
 				<th scope="col">Total</th>
 				<th scope="col">Items</th>
 				<th scope="col">Usuario</th>
@@ -16,7 +17,8 @@
 		</thead>
 		<tbody>
 			<tr *ngFor="let item of pedidos">
-				<th scope="row">{{item._id}}</th>
+				<td scope="row">{{item._id}}</td>
+				<td scope="row">{{item.creado | date:'yyyy/MM/dd'}}</td>
 				<td>{{item.total | currency}}</td>
 				<td>
 					<a href="" (click)="pedido = item" data-toggle="modal" data-target="#detalleModal">{{item.detalles.length}}</a>
@@ -38,7 +40,7 @@
 </div>
 
 <div id="detalleModal" aria-labelledby="detalleModal" class="modal fade" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">Detalles</h5>
@@ -47,9 +49,24 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<div *ngFor="let item of pedido.detalles">
-					{{item.name}}
-				</div>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col">Nombre</th>
+							<th scope="col">Cantidad</th>
+							<th scope="col">Precio Unidad</th>
+							<th scope="col">Subtotal</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let item of pedido.detalles">
+							<td scope="row">{{item.name}}</td>
+							<td scope="row">{{item.cantidad}}</td>
+							<td scope="row">{{item.precio | currency}}</td>
+							<td scope="row">{{(item.precio * item.cantidad) | currency}}</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -59,7 +76,7 @@
 </div>
 
 <div id="usuarioModal" aria-labelledby="usuarioModal" class="modal fade" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">Usuario</h5>

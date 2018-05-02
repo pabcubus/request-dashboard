@@ -6,15 +6,15 @@
 
 				<div class="form-row">
 					<div class="form-group col-md-8">
-						<select class="form-control" id="productos">
-	  	  					<option *ngFor="let producto of productos">{{producto.name}}</option>
+						<select class="form-control" id="productos" [(ngModel)]="productoId">
+	  	  					<option value="{{producto._id}}" *ngFor="let producto of productos">{{producto.name}}</option>
 	  	  				</select>
 					</div>
 					<div class="form-group col-md-2">
-						<input type="number" class="form-control" id="cantidad">
+						<input type="number" class="form-control" id="cantidad" [(ngModel)]="productoCant">
 					</div>
 					<div class="form-group col-md-2">
-						<button type="button" class="btn btn-primary">
+						<button type="button" class="btn btn-primary" (click)="addProduct()">
 							Agregar
 						</button>
 					</div>
@@ -26,35 +26,17 @@
 					<tr>
 						<th scope="col">Nombre</th>
 						<th scope="col">Cantidad</th>
+						<th scope="col">Precio Unitario</th>
 						<th scope="col">Subtotal</th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Lapices</td>
-						<td>1</td>
-						<td>$ 1.500</td>
-						<td>
-							<button type="button" class="btn btn-danger">
-								<i class="icon ion-close-round"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Borradores</td>
-						<td>2</td>
-						<td>$ 2.500</td>
-						<td>
-							<button type="button" class="btn btn-danger">
-								<i class="icon ion-close-round"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Resma de Papel</td>
-						<td>3</td>
-						<td>$ 30.000</td>
+					<tr *ngFor="let prod of pedido.detalles">
+						<td>{{prod.name}}</td>
+						<td>{{prod.cantidad}}</td>
+						<td>{{prod.precio | currency}}</td>
+						<td>{{prod.subtotal | currency}}</td>
 						<td>
 							<button type="button" class="btn btn-danger">
 								<i class="icon ion-close-round"></i>
@@ -64,7 +46,7 @@
 				</tbody>
 			</table>
 
-			<button type="button" class="btn btn-primary">
+			<button type="button" class="btn btn-primary" (click)="finalizarPedido()">
 				Finalizar Pedido
 			</button>
 		</div>
