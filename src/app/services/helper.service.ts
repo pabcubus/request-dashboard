@@ -13,4 +13,8 @@ export class HelperService {
 		let value = (parse ? JSON.parse(localStorage.getItem(key)) : localStorage.getItem(key));
 		return value;
 	}
+
+	removeLocalStorageKey(key:string){
+		localStorage.removeItem(key);
+	}
 }

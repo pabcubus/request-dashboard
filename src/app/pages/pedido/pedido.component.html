@@ -38,7 +38,7 @@
 						<td>{{prod.precio | currency}}</td>
 						<td>{{prod.subtotal | currency}}</td>
 						<td>
-							<button type="button" class="btn btn-danger">
+							<button type="button" class="btn btn-danger" (click)="removeProduct(prod)">
 								<i class="icon ion-close-round"></i>
 							</button>
 						</td>

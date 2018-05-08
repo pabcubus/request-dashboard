@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component } 		from '@angular/core';
+import { SessionService }	from './services/session.service';
+import { User }				from './interfaces/user';
 
 @Component({
 	selector: 'app-root',
@@ -8,6 +10,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
 	title = 'app';
 
-	constructor(){
+	constructor(
+		public _session: SessionService
+	) {
+	}
+
+	get currentUser():User{
+		return this._session.getCurrentUser();
 	}
 }

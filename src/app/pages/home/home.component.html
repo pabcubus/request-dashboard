@@ -27,10 +27,10 @@
 					<a href="" (click)="pedido = item" data-toggle="modal" data-target="#usuarioModal">{{item.user.nombre+' '+item.user.apellido}}</a>
 				</td>
 				<td>
-					<button type="button" class="btn btn-primary">
+					<button type="button" class="btn btn-primary" routerLink="/pedido/{{item._id}}">
 						<i class="icon ion-edit"></i>
 					</button>
-					<button type="button" class="btn btn-primary">
+					<button type="button" class="btn btn-primary" *ngIf="currentUser.rol == 'admin'">
 						<i class="icon ion-close-round"></i>
 					</button>
 				</td>

@@ -13,8 +13,18 @@ export class PedidosService {
 		return this.pedidos;
 	}
 
+	getPedido(id:number):any{
+		return this.pedidos.find(pedido => pedido._id == id);
+	}
+
 	addPedido(pedido:any) {
 		this.pedidos.push(pedido);
+	}
+
+	modifyPedido(oldpedido:any) {
+		debugger;
+		this.pedidos =  this.pedidos.filter(pedido => pedido._id != oldpedido._id);
+		this.pedidos.push(oldpedido);
 	}
 
 	private generatePedidos() {

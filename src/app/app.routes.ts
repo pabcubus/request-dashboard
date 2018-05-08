@@ -9,6 +9,7 @@ const app_routes: Routes = [
 	{ path: 'home', component: HomeComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'pedido', component: PedidoComponent },
+	{ path: 'pedido/:id', component: PedidoComponent },
 	{ path: '', pathMatch: 'full', redirectTo: 'home' },
 	{ path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

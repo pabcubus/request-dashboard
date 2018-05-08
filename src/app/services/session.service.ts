@@ -79,7 +79,9 @@ export class SessionService {
 	}
 
 	logout(){
+		this._helper.removeLocalStorageKey('user');
 		this.currentUser = null;
+		this.router.navigate(['/login']);
 	}
 
 	private setCurrentUser(){

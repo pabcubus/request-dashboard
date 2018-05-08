@@ -20,7 +20,7 @@
 		"styles": [
 			"../bower_components/Ionicons/css/ionicons.css",
 			"../node_modules/bootstrap/dist/css/bootstrap.min.css",
-			"styles.css"
+			"app/shared/shared.scss"
 		],
 		"scripts": [
 			"../node_modules/jquery/dist/jquery.min.js",
