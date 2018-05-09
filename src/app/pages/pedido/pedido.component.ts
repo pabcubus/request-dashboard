@@ -20,7 +20,7 @@ export class PedidoComponent implements OnInit {
 	public pedido: 		any			= {
 		_id: null,
 		creado: new Date(),
-		total: 73233,
+		total: 0,
 		user: {},
 		detalles: []
 	};
@@ -72,7 +72,6 @@ export class PedidoComponent implements OnInit {
 			return;
 		}
 
-		debugger;
 		if (this.pedido._id) {
 			this._pedidos.modifyPedido(this.pedido);
 		} else {

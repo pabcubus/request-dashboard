@@ -15,13 +15,10 @@ export class HomeComponent implements OnInit {
 	pedidos:any[] = [];
 	pedido:any = {};
 
-	currentUser:User;
-
 	constructor(
 		public _pedidos: PedidosService,
 		public _session: SessionService
 	) {
-		this.currentUser = this._session.getCurrentUser();
 	}
 
 	ngOnInit() {
@@ -32,9 +29,18 @@ export class HomeComponent implements OnInit {
 		this.pedido = pedido;
 	}
 
-	private getPedidos(){
-		let response = [];
+	cambiarEstadoPedido(pedido:any, estado:number){
+		if (confirm("Quieres cambiar el estado de este pedido?")) {
+			this._pedidos.cambiarEstadoPedido(pedido, estado);
+			this.getPedidos();
+		}
+	}
 
+	private getPedidos(){
 		this.pedidos = this._pedidos.getPedidos();
+	}
+
+	get currentUser():User{
+		return this._session.getCurrentUser();
 	}
 }
