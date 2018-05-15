@@ -1,5 +1,9 @@
-<app-navbar *ngIf="currentUser"></app-navbar>
+<div class="main">
+	<header>
+		<app-navbar *ngIf="currentUser"></app-navbar>
+	</header>
 
-<div class="rq-container">
-	<router-outlet></router-outlet>
+	<main class="rq-containern">
+		<router-outlet class=""></router-outlet>
+	</main>
 </div>

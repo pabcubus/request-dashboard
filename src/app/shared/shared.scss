@@ -1,3 +1,45 @@
 .rq-capitalize{
 	text-transform: capitalize;
 }
+
+.rq-flex-row{
+	flex-direction: row;
+}
+
+.rq-flex-column{
+	flex-direction: column;
+}
+
+.rq-flex-column, .rq-flex-row{
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	.rq-flex-item{
+		order: 1;
+	}
+	.rq-flex-item-grow{
+		order: 1;
+		flex-grow: 1;
+	}
+	.rq-flex-item-shrink{
+		order: 1;
+		flex-shrink: 1;
+	}
+	.rq-flex-item-half{
+		order: 1;
+		flex: 50%;
+	}
+	.rq-flex-item-66{
+		order: 1;
+		flex: 66%;
+	}
+	.rq-flex-item-77{
+		order: 1;
+		flex: 66%;
+	}
+	.rq-flex-item-33{
+		order: 1;
+		flex: 33%;
+	}
+}

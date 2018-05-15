@@ -1,6 +1,20 @@
 .pedidos{
-	.estado{
-		padding: 10px;
-		border-radius: 5px;
+	.pedidos-control{
+		padding: 5px;
+	}
+	.pedidos-reports{
+		padding: 5px;
+	}
+	.pedidos-table{
+		padding: 5px;
+		height: 700px;
+		overflow: auto;
+
+		.table{
+			.estado{
+				padding: 10px;
+				border-radius: 5px;
+			}
+		}
 	}
 }
