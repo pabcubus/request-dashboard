@@ -50,9 +50,10 @@ export class PedidosService {
 		this.pedidos.push(oldpedido);
 	}
 
-	cambiarEstadoPedido(oldpedido: any, estado: number) {
-		oldpedido.estado = this.estados.find(estado => estado.id == estado);
-		this.pedidos = this.pedidos.filter(pedido => pedido._id != oldpedido._id);
+	cambiarEstadoPedido(oldpedido: any, newestado: number) {
+		let newEstado		= this.estados.find(estado => (estado.id == newestado));
+		oldpedido.estado	= newEstado;
+		this.pedidos		= this.pedidos.filter(pedido => pedido._id != oldpedido._id);
 		this.pedidos.push(oldpedido);
 	}
 
