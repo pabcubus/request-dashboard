@@ -56,6 +56,10 @@ export class SessionService {
 		this.setCurrentUser();
 	}
 
+	getUsers(){
+		return this.users;
+	}
+
 	getUser(id:number):User{
 		return this.users.find(function(element) {
 			return element.id == id;

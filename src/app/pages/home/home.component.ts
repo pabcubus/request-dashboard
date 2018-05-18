@@ -9,11 +9,19 @@ import { User } from '../../interfaces/user';
 	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-	input1:string = '1';
-	input2:string = '2';
+	public input1:string = '1';
+	public input2:string = '2';
 
-	pedidos:any[] = [];
-	pedido:any = {};
+	public pedidos:any[] = [];
+	public usuarios:any[] = [];
+	public pedido:any = {};
+
+	public filterOptions = {
+		startDate: null,
+		endDate: null,
+		estado: 0,
+		usuario: 0,
+	}
 
 	constructor(
 		public _pedidos: PedidosService,
@@ -23,6 +31,7 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit() {
 		this.getPedidos();
+		this.getUsers();
 	}
 
 	setPedido(pedido:any){
@@ -36,8 +45,44 @@ export class HomeComponent implements OnInit {
 		}
 	}
 
+	public filterPedidos(){
+		this.pedidos = this.queryPedidos();
+	}
+
+	public exportPedidos(){
+
+	}
+
+	private queryPedidos(){
+		let pedidos = this._pedidos.getPedidos();
+		let filterOptions = {
+			startDate: 	this.filterOptions.startDate 	? new Date(this.filterOptions.startDate.replace(new RegExp('-', 'g'), '/')) 	: null,
+			endDate: 	this.filterOptions.endDate 		? new Date(this.filterOptions.endDate.replace(new RegExp('-', 'g'), '/'))		: null,
+			estado: this.filterOptions.estado,
+			usuario: this.filterOptions.usuario
+		};
+		
+		if (filterOptions.endDate) filterOptions.endDate.setDate(filterOptions.endDate.getDate() + 1);
+
+		pedidos = pedidos.filter(function(item){
+			let values = [];
+			values.push((filterOptions.startDate == null || filterOptions.startDate.getTime() <= item.creado.getTime()) 	? true : false);
+			values.push((filterOptions.endDate == null || filterOptions.endDate.getTime() >= item.creado.getTime()) 		? true : false);
+			values.push((filterOptions.estado == item.estado.id || filterOptions.estado == 0) ? true : false);
+			values.push((filterOptions.usuario == item.user.id || filterOptions.usuario == 0) ? true : false);
+
+			return values.filter(function(item){ return item == false; }).length == 0;
+		});
+
+		return pedidos;
+	}
+
 	private getPedidos(){
 		this.pedidos = this._pedidos.getPedidos();
+	}
+
+	private getUsers(){
+		this.usuarios = this._session.getUsers();
 	}
 
 	get currentUser():User{

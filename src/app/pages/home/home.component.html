@@ -7,25 +7,32 @@
 	</div>
 	<div class="pedidos-reports form-row">
 		<div class="col">
-			<input type="date" class="form-control">
+			<input type="date" class="form-control" [(ngModel)]="filterOptions.startDate">
 		</div>
 		<div class="col">
-			<input type="date" class="form-control">
+			<input type="date" class="form-control" [(ngModel)]="filterOptions.endDate">
 		</div>
 		<div class="col">
-			<select class="form-control">
-				<option value="0" selecter>Todos</option>
+			<select class="form-control" [(ngModel)]="filterOptions.estado">
+				<option value="0" selecter>Cualquier Estado</option>
 				<option value="1">Pendiente</option>
 				<option value="2">En Curso</option>
-				<option value="3">Cerrado</option>
+				<option value="3">Terminado</option>
 				<option value="4">Cancelado</option>
+			</select>
+		</div>
+		<div class="col">
+			<select class="form-control" [(ngModel)]="filterOptions.usuario">
+				<option value="0" selecter>Cualquier Usuario</option>
+				<option *ngFor="let user of usuarios" value="{{user.id}}">{{(user.nombre + ' ' + user.apellido)| uppercase}}</option>
 			</select>
 		</div>
 		<div class="col">
 			<button
 				type="button"
 				title="Filtrar"
-				class="btn btn-primary">
+				class="btn btn-primary"
+				(click)="filterPedidos()">
 				Filtrar
 			</button>
 			<button
